@@ -1,3 +1,3 @@
-var serverApp = require('./app/server');
+var serverApp = require('./app/server/server');
 
 serverApp();

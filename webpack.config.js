@@ -5,11 +5,11 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var PATHS = {
-    main: path.join(__dirname, 'app', 'client.js'),         // app folder: source code
+    main: path.join(__dirname, 'app/client', 'client.js'),         // app folder: source code
     build: path.join(__dirname, 'build'),                   // build folder: bundle code
     style: [
-        path.join(__dirname, 'app', 'styles', 'main.css'),
-        path.join(__dirname, 'app', 'styles', 'csshake.css')
+        path.join(__dirname, 'app/client', 'styles', 'main.css'),
+        path.join(__dirname, 'app/client', 'styles', 'csshake.css')
     ]
 };
 
@@ -32,7 +32,7 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'app/index.tpl.html',
+            template: 'app/client/index.tpl.html',
             inject: 'body',
             filename: 'index.html'
         }),
@@ -50,7 +50,7 @@ module.exports = {
     module: {
         loaders: [ /*{
             test: /\.js?$/,
-            include: path.join(__dirname, 'app'),
+            include: path.join(__dirname, 'app/client'),
             loader: 'react-hot',    // use react-hot-loader
         }, */{
             test: /\.jsx?$/,
